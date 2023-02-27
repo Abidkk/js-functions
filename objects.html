@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Objects</title>
+</head>
+<body>
+    
+</body>
+<script>
+    alert('Javascript Objects')
+    //  Objects 
+    // Object declaring Method 1:
+
+
+    let obj1 ={
+        name:'Abid',
+        age:23,
+        status:true,
+        disablity:null,
+        favColor:['red','green','white','black','pink'],
+        skill : function(){
+            return 'Web developer';
+        }
+    }
+
+    document.write(`${obj1} <br/>` );
+    document.write(`${obj1.name} <br/>` );
+    document.write(`${obj1.age} <br/>` );
+    document.write(`${obj1.status} <br/>` );
+    document.write(`${obj1.disablity} <br/>` );
+    document.write(`${obj1.favColor} <br/>` );
+    document.write(`${obj1.skill()} <br/>` ); 
+
+
+
+   document.write('<hr/>');
+
+
+    //  OBJECT DECLARING METHOD 2 :
+    let obj2 = new Object();
+
+    obj2.name2 = 'Ali';
+    obj2.Age2 = 23;
+    obj2.status2 = false;
+    obj2.disablity2 = undefined;
+    obj2.favColor2= ['brown','yellow','orange','wheat','blue','purple'];
+    obj2.skill2 = function(){
+        return 'App developer';
+    };
+
+    document.write(`${obj2} <br/>`)
+    document.write(`${obj2.name2} <br/>`)
+    document.write(`${obj2.Age2} <br/>`)
+    document.write(`${obj2.status2} <br/>`)
+    document.write(`${obj2.disablity2} <br/>`)
+    document.write(`${obj2.favColor2} <br/>`)
+    document.write(`${obj2.skill2()} <br/>`)
+   
+
+
+    document.write('<hr/>');
+
+
+//   this.   Function   :::
+
+let obj3 ={
+    fName:'Abid',
+    lName: 'Ali',
+    caste: 'khokhar',
+    myAge : 23,
+    city :'Mirpurkhas',
+    data: function(){
+        // return `Hello Abid ALi Khokhar How are you ?`
+        return `${this.fName} ${this.lName} `; // this. function is working
+    }
+}
+
+document.write(`${obj3.fName}<br/>`);
+document.write(`${obj3.lName} <br/>`);
+document.write(`${obj3.caste} <br/>`);
+document.write(`${obj3.myAge} <br/>`);
+document.write(`${obj3.city} <br/>`);
+document.write(`<h2 style = 'color:blue'>${obj3.data()} </h2><br/>`);//
+
+document.write('<hr/>');
+
+
+
+////::::::   ARRAY OF OBJECTS   ::  (object in Array)
+
+let students = [
+    {name:'Abid',age:23,},
+    {name:'Amir',age:26}
+];
+
+document.write(`${students[0].name}`)//     index 0  ( name )
+document.write(`${students[0].age}<br/>`)// index 0  ( age )
+document.write(`${students[1].name}`)   //  index 1  ( name )
+document.write(`${students[1].age}<br/>`)// index 1  ( age )
+document.write(`${students[0].name} ${students[0].age}<br/>`) // concat index 0 ( name + age )
+document.write(`${students[1].name} ${students[1].age}<br/>`) // concat index 1 ( name + age );
+
+//  :::  Printing in for loop  ::
+
+document.write('<hr/>')
+for (let i = 0; i < students.length; i++) {
+    //  document.write(`${students[i].name} `)
+   // document.write(`${students[i].age} <br/> `)
+
+     document.write(`${students[i].name} ${students[i].age} <br/>`)
+}
+
+document.write('<hr/>')
+
+
+
+
+
+let objects = {
+        name:'Abid',
+        age:23,
+        status:true,
+        disablity:null,
+
+    };
+for (const key in objects) {
+    document.write(`${key} : ${objects[key]} <br/>`)
+}
+
+
+
+
+
+
+
+
+
+</script>
+</html>
