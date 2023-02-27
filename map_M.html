@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array map method</title>
+</head>
+<body>
+    
+</body>
+<script>
+    alert("Hello .map()  method")
+
+//  ::: Array  .map()  method  ::
+
+// with numbers ::
+
+let array1 = [10,20,30,40,50];
+
+let a = array1.map(test);
+function test(x){
+    return  x * 10;
+}
+//document.write(array1);
+document.write(a);
+
+document.write('<hr/>');
+
+//  with Array of Object :::
+
+let array2 =[
+    {fName:'Abid',lName:'Ali'},
+    {fName:'Amir',lName:'kk'}
+];
+
+let b = array2.map(test2);
+    function test2(y){
+        return `${y.fName} ${y.lName}`;
+    }
+    document.write(b);
+
+
+
+</script>
+</html>
